@@ -1,0 +1,16 @@
+[Unit]
+Description=JFPD Flash Policy Daemon
+Requires=docker.service
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=10s
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill jfpd
+ExecStartPre=-/usr/bin/docker rm jfpd
+ExecStart=/usr/bin/docker run -p 8430:8430 --name jfpd jfpd
+ExecStop=/usr/bin/docker stop jfpd
+
+[Install]
+WantedBy=multi-user.target

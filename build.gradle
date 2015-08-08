@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = "FpdServer"
+sourceSets.main.java.srcDirs = ['src']
+sourceSets.main.resources.srcDirs = ['policy']
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "io.netty:netty-all:+"
+    testCompile "junit:junit:+"
+}

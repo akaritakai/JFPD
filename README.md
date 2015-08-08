@@ -1,2 +1,2 @@
 # JFPD
-A dockerized flash policy daemon server.
+A dockerized flash policy daemon server written in Java.

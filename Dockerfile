@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:15.10
 MAINTAINER Justin Kaufman <akaritakai@gmail.com>
 
 ENV port 8430
